@@ -5,9 +5,11 @@ export class CuentaCorriente{
     agencia;
 
     constructor() {
+        this.cliente = null; //solo existe un cliente igual
         this.#saldo = 0;
         this.numero = '';
         this.agencia = '';
+
     }
 
     depositoEnCuenta(valor) {
@@ -24,6 +26,10 @@ export class CuentaCorriente{
 
     verSaldo() {
         return this.#saldo;
+    }
+    transferirParaCuenta(valor, cuenaDestino) {
+        this.retirarDeCuenta(valor);
+        cuenaDestino.depositoEnCuenta(valor);
     }
 }
 
