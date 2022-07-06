@@ -1,39 +1,8 @@
-class Cliente
-{
-    nombreCliente;
-    dniCliente;
-    rutCliente;
-}
-class CuentaCorriente{
-    numero;
-    saldo;
-    agencia;
-
-    constructor() {
-        this.#saldo = 0;
-        this.numero = '';
-        this.agencia = '';
-    }
-
-    depositoEnCuenta(valor) {
-        if (valor > 0)
-            this.#saldo += valor;
-        return this.#saldo;
-    }
-
-    retirarDeCuenta(valor) {
-        if (valor <= this.#saldo)
-            this.#saldo -= valor;
-        return this.#saldo;
-    }
-
-    verSaldo() {
-        return this.#saldo;
-    }
-}
+//importar clases
+import { CuentaCorriente } from './CuentaCorriente'
 
 
-cuentaDeLeonardo = new CuentaCorriente();
+const cuentaDeLeonardo = new CuentaCorriente();
 //cuentaDeLeonardo.#saldo = 10;
 let saldo = cuentaDeLeonardo.verSaldo(); 
 console.log('El Saldo actual es '+saldo);
