@@ -2,10 +2,8 @@
 import { cliente } from './cliente'
 import { CuentaCorriente } from './CuentaCorriente'
 
-const cliente = new cliente();
-cliente.nombreCliente = 'Leonardo';
-cliente.dniCliente = '21903';
-cliente.rutCliente = '2141';
+const cliente = new cliente('Leonardo', '21903','2141' );
+console.log(cliente)
 
 
 const cuentaDeLeonardo = new CuentaCorriente();
@@ -26,10 +24,7 @@ console.log('El Saldo actual es '+saldo);
 saldo = cuentaDeLeonardo.depositoEnCuenta(10)
 console.log('El Saldo actual es '+saldo);
 
-const cliente2 = new cliente();
-cliente2.nombreCliente = 'Maria';
-cliente2.dniCliente = '2045142';
-cliente2.rutCliente = '12451';
+const cliente2 = new cliente('Maria', '2045142', '12451');
 
 const cuentaDeMaria = new CuentaCorriente();
 cuentaDeMaria.numero = '2'
