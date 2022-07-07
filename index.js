@@ -1,5 +1,4 @@
 //importar clases
-sdf
 import { cliente } from './cliente'
 import { CuentaCorriente } from './CuentaCorriente'
 
@@ -35,4 +34,6 @@ cliente2.rutCliente = '12451';
 const cuentaDeMaria = new CuentaCorriente();
 cuentaDeMaria.numero = '2'
 cuentaDeMaria.agencia = '002';
-cuentaDeMaria.cliente = cliente;
+cuentaDeMaria.cliente = cliente2;
+
+let parametroValor = 100;
